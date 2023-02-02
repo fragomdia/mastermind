@@ -21,7 +21,7 @@ if(!is_null($num1) && !is_null($num2) && !is_null($num3) && !is_null($num4)) {
     }
 }
 echo "<table>";
-echo "<tr><td colspan='4'>Jugada " . $_SESSION['numJugada'] . "</td><td>Acierto</td><td>Coincidencia</td></tr>";
+echo "<tr><td colspan='4' class='jugada'>Jugada " . $_SESSION['numJugada'] . "</td><td>Acierto</td><td>Coincidencia</td></tr>";
 echo "<tr><td colspan='4'>$num1 - $num2 - $num3 - $num4</td><td class='pos'>" . $_SESSION['aciertoPosicion'] . "</td><td>" . $_SESSION['aciertoNumero'] . "</td></tr>";
 $_SESSION['numJugada']++;
 ?>

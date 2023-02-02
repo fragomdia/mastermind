@@ -53,14 +53,16 @@ $_SESSION['numJugada'] = 1;
                 data: $("#form").serialize(),
                 success: function(resultado){
                         $("#resultado").append(resultado)
-                        let pos = $(".pos").text()
-                        let i = pos.split("")
-                        let p = i[i.length-1]
-                        if (p == 4) {
+                        let pos = $(".pos").eq(length-1).text()
+                        let jugada = $(".jugada").eq(length-1).text()
+                        let intento = jugada.split(" ")
+                        //let i = pos.split("")
+                        //let p = i[i.length-1]
+                        if (pos == 4) {
                             //$("#form").css("visibility", "hidden")
                             $("#form").remove()
                             $("#formulario").find("p").remove()
-                            $("#formulario").append("<h2>HAS ACERTADO</h2><i class='bi bi-trophy-fill'></i>")
+                            $("#formulario").append("<h2>HAS ACERTADO</h2><h5>Intentos: " + intento[1] + "</h5></div><i class='bi bi-trophy-fill'></i>")
                         }
                     }
             })
